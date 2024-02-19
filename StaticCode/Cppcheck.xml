@@ -1,0 +1,264 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>41</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (style) unusedStructMember: class member 'A::x' is never used.</description>
+  <highlighted_element>int x;</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>4</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>42</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (warning) uninitMemberVarPrivate: Member variable 'A::x' is not initialized in the copy constructor.</description>
+  <highlighted_element>A(const A&amp; other) {}</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>4</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>52</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (error) throwInNoexceptFunction: Exception thrown in function declared not to throw exceptions.</description>
+  <highlighted_element>throw &quot;Ha! I threw anyway!&quot;;</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>8</offset>
+  <length>28</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>59</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (error) autoVariables: Address of local auto-variable assigned to a function parameter.</description>
+  <highlighted_element>*a = &amp;b;</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>4</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>64</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (style) variableScope: The scope of the variable 'buf' can be reduced.</description>
+  <highlighted_element>int buf[10];</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>4</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>66</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (style) unreadVariable: Variable 'buf[count]' is assigned a value that is never used.</description>
+  <highlighted_element>buf[count] = 0; // &lt;- ERROR</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>8</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>66</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (warning) arrayIndexOutOfBoundsCond: Either the condition 'count==1000' is redundant or the array 'buf[10]' is accessed at index 1000, which is out of bounds.
+
+main.cpp:66: note: Array index out of bounds
+main.cpp:65: note: Assuming that condition 'count==1000' is not redundant</description>
+  <highlighted_element>buf[count] = 0; // &lt;- ERROR</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>8</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>87</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="ERROR" attribute_key="ERRORS_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (error:inconclusive) invalidContainer: Using iterator to local container 'items' that may be invalid.
+
+main.cpp:82: note: Variable created here.
+main.cpp:89: note: After calling 'erase', iterators or references to the container's data may be invalid .
+main.cpp:87: note: Assuming condition is true.
+main.cpp:88: note: Assuming condition is true.
+main.cpp:88: note: Assuming condition is true.
+main.cpp:87: note: Iterator to container is created here.</description>
+  <highlighted_element>for (iter = items.begin(); iter != items.end(); ++iter) {</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>4</offset>
+  <length>57</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>98</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (style) returnNonBoolInBooleanFunction: Non-boolean value returned from function returning bool</description>
+  <highlighted_element>return a;</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>4</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>109</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (style) unreadVariable: Variable 'tok' is assigned a value that is never used.</description>
+  <highlighted_element>tok = tok-&gt;next();</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>4</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>109</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (warning) nullPointerRedundantCheck: Either the condition 'tok' is redundant or there is possible null pointer dereference: tok.
+
+main.cpp:109: note: Null pointer dereference
+main.cpp:108: note: Assuming that condition 'tok' is not redundant</description>
+  <highlighted_element>tok = tok-&gt;next();</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>4</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>109</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (warning) uselessAssignmentPtrArg: Assignment of function parameter has no effect outside the function. Did you forget dereferencing it?</description>
+  <highlighted_element>tok = tok-&gt;next();</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>4</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>117</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (style) unreadVariable: Variable 'x' is assigned a value that is never used.</description>
+  <highlighted_element>int x = 0;</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>4</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>118</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (style) unreadVariable: Variable 'y' is assigned a value that is never used.</description>
+  <highlighted_element>int y = 0;</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>4</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>127</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (warning) assignmentInAssert: Assert statement modifies 'z'.</description>
+  <highlighted_element>assert(z = 2);</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>4</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>129</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (warning) assertWithSideEffect: Assert statement calls a function which may have desired side effects: 'my_function'.</description>
+  <highlighted_element>assert(my_function() == 3);</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>4</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>129</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (warning) compareBoolExpressionWithInt: Comparison of a boolean expression with an integer other than 0 or 1.</description>
+  <highlighted_element>assert(my_function() == 3);</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>4</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>133</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (style) shadowVariable: Local variable 'x' shadows outer variable
+
+main.cpp:133: note: Shadow variable
+main.cpp:117: note: Shadowed declaration</description>
+  <highlighted_element>int x = 5;</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>8</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>134</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (style) shadowVariable: Local variable 'y' shadows outer variable
+
+main.cpp:134: note: Shadow variable
+main.cpp:118: note: Shadowed declaration</description>
+  <highlighted_element>int y = 5;</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>8</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/main.cpp</file>
+  <line>135</line>
+  <module>StaticCode</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/main.cpp" />
+  <problem_class id="Cppcheck" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Cppcheck Inspections</problem_class>
+  <description>Cppcheck: (style) shadowVariable: Local variable 'z' shadows outer variable
+
+main.cpp:135: note: Shadow variable
+main.cpp:119: note: Shadowed declaration</description>
+  <highlighted_element>int z = 5;</highlighted_element>
+  <language>ObjectiveC</language>
+  <offset>8</offset>
+  <length>10</length>
+</problem>
+</problems>
